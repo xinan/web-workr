@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Workr</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="worker.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="float">Web Workr</h1>
+      <hr>
+      <div class="row">
+        <div class="form-group col-md-6 float">
+          <label for="worker1">Worker 1</label>
+          <textarea class="form-control" id="worker1" rows="10" placeholder="postMessage('Hello World!');"></textarea>
+        </div>
+        <div class="form-group col-md-6 float">
+          <label for="Worker 2">Worker 2</label>
+          <textarea class="form-control" id="worker2" rows="10" placeholder="postMessage('你好世界!');"></textarea>
+        </div>
+        <div class="controls col-md-12 float">
+          <button class="btn btn-primary btn-lg" id="run-button">Run</button>
+          <button class="btn btn-danger btn-lg" id="stop-button">Stop</button>
+          <button class="btn btn-warning btn-lg pull-right" id="clear-output-button">Clear Output</button>
+        </div>
+        <div class="col-md-12 output-area">
+          <h3>Outputs:</h3>
+          <div class="well" id="output-box"></div>
+        </div>
+      </div>
+      <footer class="footer">
+        <p>Copyright &copy; 2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script> Liu Xinan</p>
+      </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="worker.js"></script>
+  </body>
+</html>

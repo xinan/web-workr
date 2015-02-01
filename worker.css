@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100vh;
+}
+
+#output-box {
+  height: 300px;
+  overflow: scroll;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 18px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
