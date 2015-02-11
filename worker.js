@@ -20,11 +20,7 @@ $(document).ready(function() {
     worker2.name = 'Worker 2';
     $("#output-box").prepend('<hr>');
 
-    worker1.onmessage = function(e) {
-      $("#output-box").prepend('<p>' + e.data + '</p>');
-    }
-
-    worker2.onmessage = function(e) {
+    function onMessage(e) {
       $("#output-box").prepend('<p>' + e.data + '</p>');
     }
 
@@ -33,8 +29,11 @@ $(document).ready(function() {
         'Error in Line ', e.lineno, ' of ', e.target.name , ': ', e.message
       ].join('') + '</p>');
     }
-    worker1.addEventListener('error', onError, false);
-    worker2.addEventListener('error', onError, false);
+
+    worker1.onmessage = onMessage;
+    worker2.onmessage = onMessage;
+    worker1.onerror = onError;
+    worker2.onerror = onError;
 
   }).on("click", "#stop-button", function() {
 
@@ -45,6 +44,6 @@ $(document).ready(function() {
   }).on("click", "#clear-output-button", function() {
 
     $("#output-box").empty();
-    
+
   });
 });

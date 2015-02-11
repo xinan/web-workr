@@ -10,28 +10,19 @@
   </head>
   <body>
     <div class="container">
-       <div class="header">
+      <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/dms.html"><span class="glyphicon glyphicon-indent-left" aria-hidden="true"></span> Distributed MergeSort</a></li>
+            <li role="presentation"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
           </ul>
         </nav>
-        <h2 class="text-muted">Web Workr</h2>
+        <h2 class="text-muted">Web Workr - Distributed MergeSort</h2>
       </div>
       <hr>
       <div class="row">
-        <div class="form-group col-md-6 float">
-          <label for="worker1">Worker 1</label>
-          <textarea class="form-control" id="worker1" rows="10" placeholder="postMessage('Hello World!');"></textarea>
-        </div>
-        <div class="form-group col-md-6 float">
-          <label for="Worker 2">Worker 2</label>
-          <textarea class="form-control" id="worker2" rows="10" placeholder="postMessage('你好世界!');"></textarea>
-        </div>
-        <div class="controls col-md-12 float">
-          <button class="btn btn-primary btn-lg" id="run-button">Run</button>
-          <button class="btn btn-danger btn-lg" id="stop-button">Stop</button>
-          <button class="btn btn-warning btn-lg pull-right" id="clear-output-button">Clear Output</button>
+        <div class="form-group col-md-12 float">
+          <label for="file_upload">Upload data file</label>
+          <input type="file" id="file_upload">
         </div>
         <div class="col-md-12 output-area">
           <h3>Outputs:</h3>
@@ -45,6 +36,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="worker_alt.js"></script>
+    <script src="dms.js"></script>
   </body>
 </html>
